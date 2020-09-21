@@ -20,5 +20,12 @@ namespace Codewar_tests
             Kata _kata = new Kata();
             Assert.AreEqual(answer, _kata.Find(array));
         }
+
+        [TestCase(true, "The quick brown fox jumps over the lazy dog.")]
+        public void CheckIfSentenceIsPangram(bool answer, string sentence)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(answer, _kata.IsPangram(sentence));
+        }
     }
 }
