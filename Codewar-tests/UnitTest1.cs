@@ -27,5 +27,16 @@ namespace Codewar_tests
             Kata _kata = new Kata();
             Assert.AreEqual(answer, _kata.IsPangram(sentence));
         }
+
+        [TestCase(0, "")]
+        [TestCase(0, "abcde")]
+        [TestCase(2, "aabBcde")]
+        [TestCase(1, "Indivisibility")]
+        public void CheckDuplicateCharacterInString(int result, string sentence)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(result, _kata.DuplicateCount(sentence));
+        }
+
     }
 }

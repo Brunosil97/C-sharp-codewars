@@ -11,6 +11,14 @@ namespace C_sharp_codewars
         {
             Kata kata = new Kata();
             kata.IsPangram("The quick brown fox jumps over the lazy dog.");
+            //Console.WriteLine(kata.DuplicateCount(""));
+            //Console.WriteLine(kata.DuplicateCount("abcde"));
+            //Console.WriteLine(kata.DuplicateCount("aabbcde"));
+            //Console.WriteLine(kata.DuplicateCount("aabBcde"));
+            Console.WriteLine(kata.DuplicateCount("Indivisibility"));
+
+
+
         }
     }
 
@@ -36,6 +44,26 @@ namespace C_sharp_codewars
         public bool IsPangram(string sentence)
         {
             return sentence.ToLower().Where(ch => Char.IsLetter(ch)).GroupBy(ch => ch).Count() == 26;
+        }
+
+        //Count duplicate letters in string
+        public int DuplicateCount(string setence)
+        {
+            var charList = new List<char>();
+            var dupList = new List<char>();
+
+            if(!string.IsNullOrEmpty(setence))
+            {
+                foreach(char ch in setence.ToLower())
+                {
+                    if(!charList.Contains(ch))
+                    {
+                        charList.Add(ch);
+                    }
+                    else { dupList.Add(ch);  }
+                }
+            }
+            return dupList.Distinct().Count(); ;
         }
     }
 }
