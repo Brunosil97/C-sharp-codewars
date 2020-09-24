@@ -16,7 +16,7 @@ namespace C_sharp_codewars
             //Console.WriteLine(kata.DuplicateCount("aabbcde"));
             //Console.WriteLine(kata.DuplicateCount("aabBcde"));
             Console.WriteLine(kata.DuplicateCount("Indivisibility"));
-
+            Console.WriteLine(kata.SongDecoder("ISWUBWUBABCWUB"));
 
 
         }
@@ -64,6 +64,15 @@ namespace C_sharp_codewars
                 }
             }
             return dupList.Distinct().Count(); ;
+        }
+
+        //Dubstup song - replace dubstep WUB in song inputs
+        public string SongDecoder(string input)
+        {
+            string song = input.Replace("WUB", " ").Trim();
+            song = Regex.Replace(song, @"\s+", " ");
+
+            return song;
         }
     }
 }

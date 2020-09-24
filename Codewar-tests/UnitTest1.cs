@@ -38,5 +38,12 @@ namespace Codewar_tests
             Assert.AreEqual(result, _kata.DuplicateCount(sentence));
         }
 
+        [TestCase("ABC", "WUBWUBABCWUB")]
+        [TestCase("R L", "RWUBWUBLWUB")]
+        public void CheckSongDecoder(string result, string sentence)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(result, _kata.SongDecoder(sentence));
+        }
     }
 }
