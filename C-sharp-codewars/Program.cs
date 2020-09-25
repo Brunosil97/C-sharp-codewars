@@ -17,6 +17,7 @@ namespace C_sharp_codewars
             //Console.WriteLine(kata.DuplicateCount("aabBcde"));
             Console.WriteLine(kata.DuplicateCount("Indivisibility"));
             Console.WriteLine(kata.SongDecoder("ISWUBWUBABCWUB"));
+            Console.WriteLine(kata.FirstNonRepeat("stress"));
 
 
         }
@@ -73,6 +74,32 @@ namespace C_sharp_codewars
             song = Regex.Replace(song, @"\s+", " ");
 
             return song;
+        }
+
+        //Return the first non repeating character in a string
+        public char FirstNonRepeat(string str)
+        {
+            int i, j;
+            bool isRepeated = false;
+            char[] chars = str.ToCharArray();
+
+            for(i = 0; i < chars.Length; i++)
+            {
+                isRepeated = false;
+                for(j = 0; j < chars.Length; j++)
+                {
+                    if((i != j) && (chars[i] == chars[j]))
+                    {
+                        isRepeated = true;
+                        break;
+                    }
+                }
+                if(isRepeated == false)
+                {
+                    return str[i];
+                }
+            }
+            return ' ';        
         }
     }
 }

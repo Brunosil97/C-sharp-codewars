@@ -45,5 +45,14 @@ namespace Codewar_tests
             Kata _kata = new Kata();
             Assert.AreEqual(result, _kata.SongDecoder(sentence));
         }
+
+        [TestCase('a', "a")]
+        [TestCase('t', "stress")]
+        [TestCase('e', "moonmen")]
+        public void CheckFirstNonRepeat(char result, string sentence)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(result, _kata.FirstNonRepeat(sentence));
+        }
     }
 }
