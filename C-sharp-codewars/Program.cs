@@ -101,5 +101,16 @@ namespace C_sharp_codewars
             }
             return ' ';        
         }
+
+        //Return the names of who likes the post from string array
+        public string WhoLikedIt(string[] name)
+        {
+            if (name.Length == 1) { return $"{name[0]} likes this"; }
+            else if(name.Length == 2) { return $"{name[0]} and {name[1]} like this"; }
+            else if(name.Length == 3) { return $"{name[0]}, {name[1]} and {name[2]} like this"; }
+            else if(name.Length == 4) { return $"{name[0]}, {name[1]} and 2 others like this"; }
+            else if (name.Length > 4) { return $"{name[0]}, {name[1]} and {name.Length - 2} others like this"; }
+            else { return "no one likes this";  }
+        }
     }
 }

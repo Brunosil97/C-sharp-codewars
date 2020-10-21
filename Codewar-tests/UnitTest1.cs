@@ -54,5 +54,13 @@ namespace Codewar_tests
             Kata _kata = new Kata();
             Assert.AreEqual(result, _kata.FirstNonRepeat(sentence));
         }
+
+        [TestCase("no one likes this", new string[0])]
+        [TestCase("Peter likes this", new string[] { "Peter" })]
+        public void CheckWhoLikesPost(string answer, string[] names)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(answer, _kata.WhoLikedIt(names));
+        }
     }
 }
