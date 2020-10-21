@@ -62,5 +62,13 @@ namespace Codewar_tests
             Kata _kata = new Kata();
             Assert.AreEqual(answer, _kata.WhoLikedIt(names));
         }
+
+        [TestCase(true, "()")]
+        [TestCase(false, "[(])")]
+        public void CheckTrueOrFalseBrace(bool answer, string braces)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(answer, _kata.ValidBraces(braces));
+        }
     }
 }

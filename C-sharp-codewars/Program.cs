@@ -112,5 +112,16 @@ namespace C_sharp_codewars
             else if (name.Length > 4) { return $"{name[0]}, {name[1]} and {name.Length - 2} others like this"; }
             else { return "no one likes this";  }
         }
+
+        //Return true or false if the valid braces are in string
+        public bool ValidBraces(string braces)
+        {
+            while(braces.IndexOf("{}") != -1 || braces.IndexOf("()") != -1 || braces.IndexOf("[]") != -1)
+            {
+                braces = braces.Replace("{}", "").Replace("[]", "").Replace("()", "");
+            }
+
+            return braces.Length == 0;
+        }
     }
 }
