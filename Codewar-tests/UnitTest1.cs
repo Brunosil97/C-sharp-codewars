@@ -70,5 +70,13 @@ namespace Codewar_tests
             Kata _kata = new Kata();
             Assert.AreEqual(answer, _kata.ValidBraces(braces));
         }
+        
+        [TestCase("20th", "1935")]
+        [TestCase("21st", "2234")]
+         public void CheckIfCorrectCentury(string answer, string year)
+        {
+            Kata _kata = new Kata();
+            Assert.AreEqual(answer, _kata.WhatCentury(year));
+        }
     }
 }
