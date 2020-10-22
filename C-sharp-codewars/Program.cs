@@ -123,5 +123,23 @@ namespace C_sharp_codewars
 
             return braces.Length == 0;
         }
+        
+        //convert the year given into the century
+        public string WhatCentury(string year)
+        {
+
+            string century;
+            century = ((int.Parse(year) + 99) / 100).ToString();
+    
+            var centuryArr = century.ToCharArray();
+    
+            if(centuryArr[0] == '1') {century = century + "th";}
+            else if(centuryArr[1] == '1') {century = century + "st";}
+            else if(centuryArr[1] == '2') {century = century + "nd";}
+            else if(centuryArr[1] == '3') {century = century + "rd";}
+            else { century = century + "th"; };
+
+            return century;
+        }
     }
 }
