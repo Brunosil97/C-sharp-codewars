@@ -7,15 +7,24 @@ namespace TestDomePractice
     {
         static void Main(string[] args)
         {
+            //1
             string[] names1 = new string[] { "Ava", "Emma", "Olivia" };
             string[] names2 = new string[] { "Olivia", "Sophia", "Emma" };
             Console.WriteLine(string.Join(", ", MergeNames.UniqueNames(names1, names2)));
 
+            //2
             Node n1 = new Node(1, null, null);
             Node n3 = new Node(3, null, null);
             Node n2 = new Node(2, n1, n3);
 
             Console.WriteLine(BinarySearchTree.Contains(n2, 3));
+
+            //3
+            TextInput input = new NumericInput();
+            input.Add('1');
+            input.Add('a');
+            input.Add('0');
+            Console.WriteLine(input.GetValue());
         }
     }
     //1
@@ -65,5 +74,33 @@ namespace TestDomePractice
             }
             return false;
         }
+    }
+    //3
+    public class TextInput
+    {
+        public string Value { get; set; }
+
+        public virtual void Add(char c)
+        {
+            Value += c;
+        }
+
+        public string GetValue()
+        {
+            return Value;
+        }
+    }
+
+    public class NumericInput : TextInput
+    {
+        public override void Add(char c)
+        {
+            if (Char.IsNumber(c))
+            {
+                Value += c;
+            }
+
+        }
+
     }
 }
