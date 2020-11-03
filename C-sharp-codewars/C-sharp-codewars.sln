@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C-sharp-codewars", "C-sharp-codewars.csproj", "{0D2CB439-8617-4089-981E-696AE7120643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C-sharp-codewars", "C-sharp-codewars.csproj", "{0D2CB439-8617-4089-981E-696AE7120643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codewar-tests", "..\Codewar-tests\Codewar-tests.csproj", "{DB974232-E299-4D8C-9C1A-F23762250019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codewar-tests", "..\Codewar-tests\Codewar-tests.csproj", "{DB974232-E299-4D8C-9C1A-F23762250019}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0D2CB439-8617-4089-981E-696AE7120643} = {0D2CB439-8617-4089-981E-696AE7120643}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDomePractice", "..\TestDomePractice\TestDomePractice.csproj", "{0E120E07-729E-4EAB-A2A5-2A0C3CB5F4C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{DB974232-E299-4D8C-9C1A-F23762250019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB974232-E299-4D8C-9C1A-F23762250019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB974232-E299-4D8C-9C1A-F23762250019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E120E07-729E-4EAB-A2A5-2A0C3CB5F4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E120E07-729E-4EAB-A2A5-2A0C3CB5F4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E120E07-729E-4EAB-A2A5-2A0C3CB5F4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E120E07-729E-4EAB-A2A5-2A0C3CB5F4C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
