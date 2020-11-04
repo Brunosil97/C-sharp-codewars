@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace TestDomePractice
@@ -126,5 +127,50 @@ namespace TestDomePractice
             var valueNum = Array.BinarySearch(sortedArray, lessThan); //better for performance
             return valueNum < 0 ? ~valueNum : valueNum;
         }
+    }
+
+    //5
+    public class AlertService
+    {
+        private readonly IAlertDAO storage = new AlertDAO();
+
+        public AlertService(IAlertDAO ifInstance)
+        {
+            storage = ifInstance;
+        }
+
+        public Guid RaiseAlert()
+        {
+            return this.storage.AddAlert(DateTime.Now);
+        }
+
+        public DateTime GetAlertTime(Guid id)
+        {
+            return this.storage.GetAlert(id);
+        }
+    }
+
+    public interface IAlertDAO
+    {
+        Guid AddAlert(DateTime time);
+        DateTime GetAlert(Guid id);
+    }
+
+    public class AlertDAO : IAlertDAO
+    {
+        private readonly Dictionary<Guid, DateTime> alerts = new Dictionary<Guid, DateTime>();
+
+        public Guid AddAlert(DateTime time)
+        {
+            Guid id = Guid.NewGuid();
+            this.alerts.Add(id, time);
+            return id;
+        }
+
+        public DateTime GetAlert(Guid id)
+        {
+            return this.alerts[id];
+        }
+
     }
 }
