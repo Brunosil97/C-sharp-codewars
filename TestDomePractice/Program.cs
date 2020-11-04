@@ -25,6 +25,9 @@ namespace TestDomePractice
             input.Add('a');
             input.Add('0');
             Console.WriteLine(input.GetValue());
+
+            //4
+            Console.WriteLine(SortedSearch.CountNumbers(new int[] { 1, 3, 5, 7 }, 4));
         }
     }
     //1
@@ -102,5 +105,26 @@ namespace TestDomePractice
 
         }
 
+    }
+
+    //4
+    public class SortedSearch
+    {
+        public static int CountNumbers(int[] sortedArray, int lessThan)
+        {
+            //return sortedArray.Where(num => num < lessThan).Count();
+            //int returnedValued = 0;
+            //foreach (int i in sortedArray)
+            //{
+            //   if (i < lessThan)
+            //       returnedValued += 1;
+            //      else break;
+            //}
+
+            //return returnedValued;
+
+            var valueNum = Array.BinarySearch(sortedArray, lessThan); //better for performance
+            return valueNum < 0 ? ~valueNum : valueNum;
+        }
     }
 }
