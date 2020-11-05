@@ -34,6 +34,13 @@ namespace TestDomePractice
             Account account = new Account(-20);
             account.Deposit(20);
             account.Withdraw(10);
+
+            //7
+            Tuple<int, int> indices = TwoSum.FindTwoSum(new List<int>() { 3, 1, 5, 7, 5, 9 }, 10);
+            if (indices != null)
+            {
+                Console.WriteLine(indices.Item1 + " " + indices.Item2);
+            }
         }
     }
     //1
@@ -209,6 +216,31 @@ namespace TestDomePractice
                 return true;
             }
             return false;
+        }
+    }
+
+    //7
+    class TwoSum
+    {
+        public static Tuple<int, int> FindTwoSum(IList<int> list, int sum)
+        {
+            var dictionary = new Dictionary<int, int>();
+
+            for (var i = 0; i < list.Count; i++)
+            {
+                var aim = sum - list[i];
+
+                if (dictionary.ContainsKey(aim))
+                {
+                    return new Tuple<int, int>(dictionary[aim], i);
+                }
+                else if (!dictionary.ContainsKey(list[i]))
+                {
+                    dictionary.Add(list[i], i);
+                }
+            }
+
+            return null;
         }
     }
 }
