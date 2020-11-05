@@ -56,7 +56,7 @@ namespace TestDomeNUnit
         public void WithdrawCorrectAmount()
         {
             Account account = new Account(-20);
-            
+            account.Deposit(20);
             Assert.AreEqual(true, account.Withdraw(5.0));
         }
     

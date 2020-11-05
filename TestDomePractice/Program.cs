@@ -29,6 +29,11 @@ namespace TestDomePractice
 
             //4
             Console.WriteLine(SortedSearch.CountNumbers(new int[] { 1, 3, 5, 7 }, 4));
+
+            //6
+            Account account = new Account(-20);
+            account.Deposit(20);
+            account.Withdraw(10);
         }
     }
     //1
