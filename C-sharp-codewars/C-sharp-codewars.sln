@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDomePractice", "..\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDomeNUnit", "..\TestDomeNUnit\TestDomeNUnit.csproj", "{9F6514C7-2664-4527-BA06-415A545FBC50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDomeTest", "..\TestDomeTest\TestDomeTest.csproj", "{DD450C46-4C20-4958-A1DB-4A57AB6E7319}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{9F6514C7-2664-4527-BA06-415A545FBC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6514C7-2664-4527-BA06-415A545FBC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6514C7-2664-4527-BA06-415A545FBC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD450C46-4C20-4958-A1DB-4A57AB6E7319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD450C46-4C20-4958-A1DB-4A57AB6E7319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD450C46-4C20-4958-A1DB-4A57AB6E7319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD450C46-4C20-4958-A1DB-4A57AB6E7319}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
