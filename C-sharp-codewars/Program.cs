@@ -196,5 +196,14 @@ namespace C_sharp_codewars
             return message;
         
         }
+        
+        public string ToWeirdCase(string s)
+        {
+            return string.Join(" ", 
+              s.Split(' ')
+              .Select(w => string.Concat(
+              w.Select((ch, i) => i % 2 == 0 ? char.ToUpper(ch) : char.ToLower(ch)
+             ))));
+        }
      }
 }
